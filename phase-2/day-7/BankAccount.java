@@ -90,6 +90,47 @@ public List<Customer> getAllCustomers()
  }   
  return list;
 }
+
+
+public void withdraw(String accountNumber,double withdrawAmount)
+{
+    if(!accountNumberWiseCustomer.containsKey(accountNumber))
+    {
+        System.out.println("Invalid Account Number please enter valid account Number ");
+        return;
+    }
+   
+   Customer c= accountNumberWiseCustomer.get(accountNumber);
+double currentBalance=c.getBalance();
+double afterWithdrawAmount=currentBalance-withdrawAmount;
+if(afterWithdrawAmount<0) 
+{
+    System.out.println("Insufficient balance, Please enter valid amount");
+    System.out.println("Available balance is :"+currentBalance);
+   return;
+}
+c.setBalance(afterWithdrawAmount);
+System.out.println(withdrawAmount+" Rs is withdrawed");
+System.out.println("Available balance Rs :"+afterWithdrawAmount);
+}
+
+
+public void deposite(String accountNumber,double depositeAmount)
+{
+    if(!accountNumberWiseCustomer.containsKey(accountNumber))
+    {
+        System.out.println("Invalid Account Number please enter valid account Number ");
+        return;
+    }
+   
+   Customer c= accountNumberWiseCustomer.get(accountNumber);
+double currentBalance=c.getBalance();
+double afterDepositeBalance=currentBalance+depositeAmount;
+
+c.setBalance(afterDepositeBalance);
+System.out.println(depositeAmount+" Rs is deposited");
+System.out.println("Available balance Rs :"+afterDepositeBalance);
+}
 public Customer getCustomerByAccountNumber(String accountNumber)
 {
     return null;
@@ -105,8 +146,10 @@ while(true)
 System.out.println("2.Edit Account Details :");
 System.out.println("3.Remove Account :");
 System.out.println("4.Show All Accounts :");
-System.out.println("5.Exit Software :");
-System.out.println("Enter a number to operate 1-5");
+System.out.println("5.Deposite: ");
+System.out.println("6.Withdraw :");
+System.out.println("7.Exit Software :");
+System.out.println("Enter a number to operate 1-7");
 int num=sc.nextInt();
 if(num==1)
 {
@@ -148,8 +191,29 @@ List<Customer> c=b.getAllCustomers();
     System.out.println("----------------------------------------");
 });
 }
-else if(num==5) break;
-else System.out.println("Please Enter valid operation from 1 to 5");
+else if(num==5)
+{
+
+    System.out.print("Enter your account number :");
+    if(sc.hasNext()) sc.nextLine();
+    String accountNumber=sc.nextLine();
+    System.out.print("Enter amount you want to deposite :");
+    double depositeAmount=sc.nextDouble();
+    b.deposite(accountNumber,depositeAmount);    
+}
+else if(num==6) 
+{
+    System.out.print("Enter your account number :");
+    if(sc.hasNext()) sc.nextLine();
+    String accountNumber=sc.nextLine();
+    System.out.print("Enter amount you want to withdraw :");
+    double withdraw=sc.nextDouble();
+    b.withdraw(accountNumber,withdraw);
+    
+
+}
+else if(num==7) break;
+ System.out.println("Please Enter valid operation from 1 to 5");
 }
 }
 }
