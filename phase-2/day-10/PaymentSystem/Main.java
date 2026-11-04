@@ -31,6 +31,8 @@ public class Main
                 if(sc.hasNext()) sc.nextLine();
                 String accountNumber=sc.nextLine();
                 paymentDetails=new PaymentDetails();
+
+                 paymentDetails.setAccountNumber(accountNumber);
                 paymentDetails.setPaymentAmount(paymentAmount);
 
                 System.out.println("1.UPI payement");
