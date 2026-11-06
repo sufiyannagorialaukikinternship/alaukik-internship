@@ -169,12 +169,87 @@ gender=tmp;
         System.out.println("______________________________________________");
     });
 }else if(num==5)
-{}else if(num==6)
-{}else if(num==7)
-{}else if(num==8)
-{}else if(num==9)
-{}else if(num==10)
-{}else if(num==11)
+{
+  System.out.print("Enter Employee Id :");
+   employeeId=br.readLine();
+
+    EmployeeModel emp=employeeService.getByEmployeeId(employeeId);
+    System.out.println("**************Employee "+emp.getEmployeeName()+" Details***************");
+
+
+        System.out.println("Employee Id :"+emp.getEmployeeId());
+        System.out.println("Employee Name :"+emp.getEmployeeName());
+        System.out.println("Date of birth :"+emp.getDob());
+        System.out.println("Is Indian :"+emp.isIndian());
+        System.out.println("Employee Salary :"+emp.getSalary());
+        System.out.println("Gender :"+emp.getGender());
+        System.out.println("Aadhar Number :"+emp.getAadharNumber());
+        System.out.println("Pan Number :"+emp.getPanNumber());
+        System.out.println("***********************************************");
+
+
+}else if(num==6)
+{
+  System.out.print("Enter Employee Id to check existence :");
+   employeeId=br.readLine();
+ System.out.println("Employee Id is Exists :"+employeeService.isEmployeeIdExists(employeeId));
+}else if(num==7)
+{
+
+  System.out.print("Enter Aadhar Number  :");
+   aadharNumber=br.readLine();
+
+    EmployeeModel emp=employeeService.getByAadharNumber(aadharNumber);
+    System.out.println("**************Employee "+emp.getEmployeeName()+" Details***************");
+
+
+        System.out.println("Employee Id :"+emp.getEmployeeId());
+        System.out.println("Employee Name :"+emp.getEmployeeName());
+        System.out.println("Date of birth :"+emp.getDob());
+        System.out.println("Is Indian :"+emp.isIndian());
+        System.out.println("Employee Salary :"+emp.getSalary());
+        System.out.println("Gender :"+emp.getGender());
+        System.out.println("Aadhar Number :"+emp.getAadharNumber());
+        System.out.println("Pan Number :"+emp.getPanNumber());
+        System.out.println("***********************************************");
+
+
+
+
+}else if(num==8)
+{
+      System.out.print("Enter Aadhar Number to check existence :");
+   aadharNumber=br.readLine();
+ System.out.println("Employee Id is Exists :"+employeeService.isAadharNumberExists(aadharNumber));
+
+}else if(num==9)
+{
+
+  System.out.print("Enter Pan Number  :");
+   panNumber=br.readLine();
+
+    EmployeeModel emp=employeeService.getByAadharNumber(panNumber);
+    System.out.println("**************Employee "+emp.getEmployeeName()+" Details***************");
+
+
+        System.out.println("Employee Id :"+emp.getEmployeeId());
+        System.out.println("Employee Name :"+emp.getEmployeeName());
+        System.out.println("Date of birth :"+emp.getDob());
+        System.out.println("Is Indian :"+emp.isIndian());
+        System.out.println("Employee Salary :"+emp.getSalary());
+        System.out.println("Gender :"+emp.getGender());
+        System.out.println("Aadhar Number :"+emp.getAadharNumber());
+        System.out.println("Pan Number :"+emp.getPanNumber());
+        System.out.println("***********************************************");
+
+}else if(num==10)
+{
+
+          System.out.print("Enter Pan Number to check existence :");
+   panNumber=br.readLine();
+ System.out.println("Employee Id is Exists :"+employeeService.isAadharNumberExists(panNumber));
+
+}else if(num==11)
 {
     break;
 }

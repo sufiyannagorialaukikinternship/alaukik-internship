@@ -161,7 +161,9 @@ if(employeeIdWiseEmployeeMap.containsKey(employeeId)==false) throw new Exception
               if(employeeId==null)throw new Exception("EmployeeId is null");
         employeeId=employeeId.trim();
         if(employeeId.length()==0) throw new Exception("Employee Id required");
+
 EmployeeModel employee=employeeIdWiseEmployeeMap.get(employeeId);
+if(employee==null) throw new Exception("Invalid employeeId, their is no data with employee Id :"+employeeId);
             EmployeeModel employeeModel=new EmployeeModel();
             employeeModel.setEmployeeId(employee.getEmployeeId());
             employeeModel.setEmployeeName(employee.getEmployeeName());
@@ -180,20 +182,58 @@ EmployeeModel employee=employeeIdWiseEmployeeMap.get(employeeId);
         if(employeeId.length()==0) throw new Exception("Employee Id required");
                  return employeeIdWiseEmployeeMap.containsKey(employeeId);
     }
-       public EmployeeModel getByEmployeeAadharNumber(String aadharNumber) throws Exception
+       public EmployeeModel getByAadharNumber(String aadharNumber) throws Exception
     {
-                throw new Exception("Not yet implemented");
+              if(aadharNumber==null)throw new Exception("aadharNumber is null");
+        aadharNumber=aadharNumber.trim();
+        if(aadharNumber.length()==0) throw new Exception("aadharNumber required");
+EmployeeModel employee=aadharNumberWiseEmployeeMap.get(aadharNumber);
+if(employee==null) throw new Exception("Invalid aadharNumber, their is no data with aadhar Number :"+aadharNumber);
+            EmployeeModel employeeModel=new EmployeeModel();
+            employeeModel.setEmployeeId(employee.getEmployeeId());
+            employeeModel.setEmployeeName(employee.getEmployeeName());
+            employeeModel.setDob(employee.getDob());
+            employeeModel.setIndian(employee.isIndian());
+            employeeModel.setSalary(employee.getSalary());
+            employeeModel.setGender(employee.getGender());
+            employeeModel.setAadharNumber(employee.getAadharNumber());
+            employeeModel.setPanNumber(employee.getPanNumber());
+ return employeeModel;
+    
     }
-    public boolean isAadharNumberExists(String employeeId) throws Exception
+    public boolean isAadharNumberExists(String aadharNumber) throws Exception
     {
-                throw new Exception("Not yet implemented");
+
+              if(aadharNumber==null)throw new Exception("aadharNumber is null");
+        aadharNumber=aadharNumber.trim();
+        if(aadharNumber.length()==0) throw new Exception("aadharNumber required");
+                 return aadharNumberWiseEmployeeMap.containsKey(aadharNumber);
     }
-       public EmployeeModel  getByPanNumber(String panNumber) throws Exception
+       public EmployeeModel  getByPanNumber (String panNumber) throws Exception
     {
-                throw new Exception("Not yet implemented");
+ 
+              if(panNumber==null)throw new Exception("panNumber is null");
+        panNumber=panNumber.trim();
+        if(panNumber.length()==0) throw new Exception("panNumber required");
+EmployeeModel employee=panNumberWiseEmployeeMap.get(panNumber);
+if(employee==null) throw new Exception("Invalid pan Number, their is no data with panNumber :"+panNumber    );
+            EmployeeModel employeeModel=new EmployeeModel();
+            employeeModel.setEmployeeId(employee.getEmployeeId());
+            employeeModel.setEmployeeName(employee.getEmployeeName());
+            employeeModel.setDob(employee.getDob());
+            employeeModel.setIndian(employee.isIndian());
+            employeeModel.setSalary(employee.getSalary());
+            employeeModel.setGender(employee.getGender());
+            employeeModel.setAadharNumber(employee.getAadharNumber());
+            employeeModel.setPanNumber(employee.getPanNumber());
+ return employeeModel;
+    
     }
     public boolean isPanNumberExists(String panNumber) throws Exception
     {
-                throw new Exception("Not yet implemented");
+              if(panNumber==null)throw new Exception("panNumber is null");
+        panNumber=panNumber.trim();
+        if(panNumber.length()==0) throw new Exception("panNumber required");
+                 return panNumberWiseEmployeeMap.containsKey(panNumber);
     }
 }
