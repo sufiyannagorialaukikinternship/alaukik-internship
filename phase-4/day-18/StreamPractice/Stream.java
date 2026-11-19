@@ -7,7 +7,7 @@ public class Stream
 List<String> currentList=Arrays.asList("Laptop","Mouse","Keyboard","Joypad","Remote","Speaker","Head phones","Web cam","Pen drive","Mouse","Keyboard");
 
 System.out.println("Before operation list  is ");
-System.out.println(currentList);
+    System.out.println(currentList);
 System.out.println("=======================================================================\n");
 
 System.out.println("--> operation : distinct()");
@@ -18,7 +18,7 @@ currentList=currentList.stream().distinct().collect(Collectors.toList());
 
 System.out.println("\n\n--> operation : filter()");
 System.out.println("Before :"+currentList);
-currentList=currentList.stream().filter(item->item.length()>=5).collect(Collectors.toList());
+currentList=currentList.stream().filter().(item->item.length()>=5).collect(Collectors.toList());
 System.out.println("After :"+currentList);
 
 
