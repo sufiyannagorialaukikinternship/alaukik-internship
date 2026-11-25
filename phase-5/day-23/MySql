@@ -1,0 +1,128 @@
+SQL JOINS, SUBQUERIES, AGGREGATE FUNCTIONS AND INDEXES
+
+1. Objective
+
+To understand SQL Joins, Subqueries, Aggregate Functions and Indexes and perform basic reporting queries using MySQL.
+
+2. SQL JOINS
+
+JOIN is used to combine data from two or more tables using a common column.
+
+INNER JOIN
+
+INNER JOIN returns only matching records from both tables.
+
+SELECT employees.name, departments.dep_name
+FROM employees
+INNER JOIN departments
+ON employees.dep_id = departments.dep_id;
+
+LEFT JOIN
+
+LEFT JOIN returns all records from the left table and matching records from the right table.
+
+SELECT employees.name, departments.dep_name
+FROM employees
+LEFT JOIN departments
+ON employees.dep_id = departments.dep_id;
+
+RIGHT JOIN
+
+RIGHT JOIN returns all records from the right table and matching records from the left table.
+
+SELECT employees.name, departments.dep_name
+FROM employees
+RIGHT JOIN departments
+ON employees.dep_id = departments.dep_id;
+
+3. SUBQUERIES
+
+A Subquery is a query written inside another SQL query.
+
+Example: Find the employee having the highest salary.
+
+SELECT *
+FROM employees
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM employees
+);
+
+4. AGGREGATE FUNCTIONS
+
+Aggregate functions perform calculations on multiple rows and return a single result.
+
+COUNT() – Counts total records.
+
+SELECT COUNT(*) FROM employees;
+
+SUM() – Calculates total salary.
+
+SELECT SUM(salary) FROM employees;
+
+AVG() – Calculates average salary.
+
+SELECT AVG(salary) FROM employees;
+
+MAX() – Finds maximum salary.
+
+SELECT MAX(salary) FROM employees;
+
+MIN() – Finds minimum salary.
+
+SELECT MIN(salary) FROM employees;
+
+5. INDEXES
+
+An Index is used to make searching records faster in a database.
+
+Example: Create an index on the employee name column.
+
+CREATE INDEX idx_employee_name
+ON employees(name);
+
+Delete the index.
+
+DROP INDEX idx_employee_name
+ON employees;
+
+6. PRACTICAL REPORTING QUERIES
+
+Employee + Department
+
+Display employee names with their department names.
+
+SELECT employees.name, departments.dep_name
+FROM employees
+INNER JOIN departments
+ON employees.dep_id = departments.dep_id;
+
+Employee + Salary
+
+Display employee names with their salaries.
+
+SELECT name, salary
+FROM employees;
+
+Department-wise Salary
+
+Display total salary of each department.
+
+SELECT dep_id, SUM(salary) AS total_salary
+FROM employees
+GROUP BY dep_id;
+
+Highest Paid Employee
+
+Find the employee who receives the highest salary.
+
+SELECT *
+FROM employees
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM employees
+);
+
+7. Conclusion
+
+In this practical, we learned SQL Joins, Subqueries, Aggregate Functions and Indexes. We also created basic reporting queries to display employee details, department information and salary records.

@@ -1,0 +1,76 @@
+MYSQL DATABASE PRACTICAL REPORT
+
+TITLE: Install and Configure MySQL and Create Employee Database
+
+1. OBJECTIVE
+
+To install and configure MySQL Server and create a database named employee_db with three tables: employees, departments, and roles.
+
+2. INSTALLATION AND CONFIGURATION
+
+- Downloaded and installed MySQL Server.
+- Configured MySQL Server.
+- Connected to MySQL using MySQL Command Line Client.
+- Successfully accessed the MySQL command prompt.
+
+3. DATABASE CREATION
+
+Created a database named employee_db.
+
+SQL QUERY:
+
+CREATE DATABASE employee_db;
+
+USE employee_db;
+
+4. TABLE CREATION
+
+Created the following three tables:
+
+1. employees
+2. departments
+3. roles
+
+A. DEPARTMENTS TABLE
+
+Stores department information such as department ID and department name.
+
+B. ROLES TABLE
+
+Stores role information such as role ID, role name, and description.
+
+C. EMPLOYEES TABLE
+
+Stores employee information such as employee ID, employee name, department ID, and role ID.
+
+The employees table is connected to the departments and roles tables using Foreign Keys.
+
+5. DATABASE VERIFICATION
+
+Used the following SQL commands to verify the database and tables:
+
+SHOW DATABASES;
+
+USE employee_db;
+
+SHOW TABLES;
+
+DESCRIBE employees;
+
+DESCRIBE departments;
+
+DESCRIBE roles;
+
+6. RESULT
+
+Successfully installed and configured MySQL Server.
+
+Successfully created the employee_db database and the following three tables:
+
+- employees
+- departments
+- roles
+
+7. CONCLUSION
+
+In this practical, MySQL was successfully installed and configured. A database named employee_db was created with three tables: employees, departments, and roles. This practical provided basic knowledge of MySQL database creation, table creation, and database configuration.

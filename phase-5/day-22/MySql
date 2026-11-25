@@ -1,0 +1,102 @@
+MYSQL PRACTICAL REPORT
+TOPIC: BASIC SQL COMMANDS
+
+1. OBJECTIVE
+
+To learn and practice basic SQL commands in MySQL, including CREATE, INSERT, SELECT, UPDATE, DELETE, WHERE, ORDER BY, GROUP BY, and HAVING.
+
+2. CREATE COMMAND
+
+CREATE command is used to create a new database or table.
+
+Example:
+
+CREATE DATABASE employee_db;
+
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    dep_id INT,
+    role_id INT
+);
+
+3. INSERT COMMAND
+
+INSERT command is used to add new records into a table.
+
+Example:
+
+INSERT INTO employees(name, dep_id, role_id)
+VALUES ('Aman Sharma', 1, 2);
+
+4. SELECT COMMAND
+
+SELECT command is used to retrieve data from a table.
+
+Example:
+
+SELECT * FROM employees;
+
+5. UPDATE COMMAND
+
+UPDATE command is used to modify existing records in a table.
+
+Example:
+
+UPDATE employees
+SET name = 'Rahul Sharma'
+WHERE employee_id = 1;
+
+6. DELETE COMMAND
+
+DELETE command is used to remove records from a table.
+
+Example:
+
+DELETE FROM employees
+WHERE employee_id = 1;
+
+7. WHERE CLAUSE
+
+WHERE is used to filter records based on a specific condition.
+
+Example:
+
+SELECT * FROM employees
+WHERE dep_id = 1;
+
+8. ORDER BY CLAUSE
+
+ORDER BY is used to arrange records in ascending or descending order.
+
+Example:
+
+SELECT * FROM employees
+ORDER BY name ASC;
+
+9. GROUP BY CLAUSE
+
+GROUP BY is used to group records having the same values.
+
+Example:
+
+SELECT dep_id, COUNT(*)
+FROM employees
+GROUP BY dep_id;
+
+10. HAVING CLAUSE
+
+HAVING is used to filter groups based on a condition.
+
+Example:
+
+SELECT dep_id, COUNT(*) AS total
+FROM employees
+GROUP BY dep_id
+HAVING COUNT(*) >= 2;
+
+11. CONCLUSION
+
+In this practical, we learned basic SQL commands in MySQL. We practiced creating tables, inserting records, retrieving data, updating and deleting records, filtering data, sorting records, and grouping records using GROUP BY and HAVING.
+
+These commands provide the basic knowledge required to work with MySQL databases.
