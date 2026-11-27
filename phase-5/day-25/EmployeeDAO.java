@@ -125,7 +125,7 @@ public class EmployeeDAO
     }
 
     // 4. GET ALL EMPLOYEES
-    public List<Employee> getAllEmployee() throws Exception
+     public List<Employee> getAllEmployee() throws Exception
     {
         List<Employee> employeeList=new LinkedList<>();
 

@@ -1,0 +1,307 @@
+# HTTP Methods and Postman Practical Report
+
+Date: 27 November 2026
+
+## 1. Objective
+
+To understand HTTP concepts and perform practical testing of different HTTP methods using Postman.
+
+## 2. Tools Used
+
+- Postman
+- JSONPlaceholder API
+- HTTPBin API
+
+## 3. GET Method
+
+GET method is used to retrieve data from the server.
+
+Practical 1: Fetch a single post.
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Method: GET
+
+Result:
+- Received post details from the server.
+- Status Code: 200 OK
+- Response format: JSON
+
+Practical 2: Fetch another post.
+
+URL:
+https://jsonplaceholder.typicode.com/posts/2
+
+Method: GET
+
+Result:
+- Successfully received Post ID 2.
+
+Practical 3: Fetch posts using Query Parameters.
+
+URL:
+https://jsonplaceholder.typicode.com/posts?userId=1
+
+Method: GET
+
+Result:
+- Received all posts belonging to userId 1.
+
+Practical 4: Change Query Parameter value.
+
+URL:
+https://jsonplaceholder.typicode.com/posts?userId=2
+
+Method: GET
+
+Result:
+- Received posts belonging to userId 2.
+
+Practical 5: Use multiple Query Parameters.
+
+URL:
+https://jsonplaceholder.typicode.com/posts?userId=2&id=11
+
+Method: GET
+
+Result:
+- Received the post matching userId 2 and post ID 11.
+
+Concepts Learned:
+- Path Parameters
+- Query Parameters
+- Multiple Query Parameters
+- JSON Response
+
+## 4. POST Method
+
+POST method is used to send data to the server and create a new resource.
+
+URL:
+https://jsonplaceholder.typicode.com/posts
+
+Method: POST
+
+Body Type: Raw JSON
+
+Request Body:
+
+{
+  "title": "Java Full Stack Developer",
+  "body": "I am learning REST API using Postman",
+  "userId": 1
+}
+
+Result:
+- Successfully sent JSON data to the server.
+- Server returned the submitted data.
+- A generated ID was returned.
+- Status Code: 201 Created.
+
+Additional Practical:
+
+Changed the title to:
+
+"My First Rest APi"
+
+Sent the request again and received the updated request data in the response.
+
+## 5. Headers Practical
+
+Opened the Headers tab in Postman and inspected automatically generated request headers.
+
+Important Headers:
+
+Content-Type: application/json
+
+Accept: */*
+
+Created a custom header:
+
+Key: Developer
+
+Value: Sufiyan Nagori
+
+Sent the request with the custom header enabled and disabled.
+
+Result:
+- Request was successfully processed.
+- Status Code: 201 Created.
+- Response remained the same because the testing API did not process the custom header.
+
+Concept Learned:
+Headers provide additional information with HTTP requests and responses.
+
+Content-Type tells the server the format of the request body.
+
+## 6. PUT Method
+
+PUT method is used to completely update an existing resource.
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Method: PUT
+
+Body Type: Raw JSON
+
+Request Body:
+
+{
+  "id": 1,
+  "title": "Update Java developer",
+  "body": "I am learning PUT method in Postman",
+  "userId": 1
+}
+
+Result:
+- Successfully sent the PUT request.
+- Server returned the updated object.
+- Status Code: 200 OK.
+
+Additional Practical:
+
+Performed a GET request again on the same URL.
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Result:
+- Original data was returned instead of the updated data.
+
+Reason:
+JSONPlaceholder is a testing API. It returns simulated update responses but does not permanently save changes in its database.
+
+## 7. PATCH Method
+
+PATCH method is used to partially update an existing resource.
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Method: PATCH
+
+First Request Body:
+
+{
+  "title": "Only Title Updated using PATCH"
+}
+
+Result:
+- Sent only the title field.
+- Received the updated title in the response.
+- Other fields remained present in the response.
+- Status Code: 200 OK.
+
+Second Request Body:
+
+{
+  "body": "My body is updated using PATCH"
+}
+
+Result:
+- Sent only the body field.
+- Received the updated body in the response.
+
+Concept Learned:
+PATCH updates selected fields instead of sending the complete object.
+
+## 8. DELETE Method
+
+DELETE method is used to send a request to delete an existing resource.
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Method: DELETE
+
+Result:
+- Successfully sent the DELETE request.
+- Status Code: 200 OK.
+- Response Body: {}
+
+Note:
+JSONPlaceholder simulates the DELETE operation. It does not permanently delete data from a real database.
+
+## 9. HTTP Status Codes Practical
+
+Used HTTPBin API to understand different HTTP status codes.
+
+1. 404 Not Found
+
+URL:
+https://httpbin.org/status/404
+
+Meaning:
+The requested resource was not found.
+
+2. 401 Unauthorized
+
+URL:
+https://httpbin.org/status/401
+
+Meaning:
+Authentication credentials are missing or invalid.
+
+3. 403 Forbidden
+
+URL:
+https://httpbin.org/status/403
+
+Meaning:
+The server understood the request but access is not permitted.
+
+4. 500 Internal Server Error
+
+URL:
+https://httpbin.org/status/500
+
+Meaning:
+An internal server error occurred while processing the request.
+
+5. 400 Bad Request
+
+URL:
+https://httpbin.org/status/400
+
+Meaning:
+The request contains invalid or incorrect information.
+
+6. 503 Service Unavailable
+
+URL:
+https://httpbin.org/status/503
+
+Meaning:
+The server is temporarily unable to handle the request.
+
+7. 201 Created
+
+Meaning:
+The request successfully created a resource.
+
+## 10. Important Concepts Learned
+
+1. Client-Server Architecture
+2. HTTP and HTTPS
+3. HTTP Request and Response
+4. HTTP Methods
+5. GET, POST, PUT, PATCH and DELETE
+6. Path Parameters
+7. Query Parameters
+8. Request Body
+9. JSON Data Format
+10. Request Headers
+11. Content-Type
+12. HTTP Status Codes
+
+## 11. Conclusion
+
+In this practical, I learned how to use Postman for API testing.
+
+I performed GET, POST, PUT, PATCH and DELETE requests using JSONPlaceholder API.
+
+I also practiced Query Parameters, Request Body, Headers and different HTTP Status Codes using HTTPBin.
+
+This practical helped me understand how clients communicate with servers through HTTP requests and responses.

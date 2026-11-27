@@ -1,0 +1,48 @@
+27-Nov-2026 10:39:29.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.29
+27-Nov-2026 10:39:29.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 9 2026 19:12:31 UTC
+27-Nov-2026 10:39:29.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.29.0
+27-Nov-2026 10:39:29.653 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+27-Nov-2026 10:39:29.654 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+27-Nov-2026 10:39:29.654 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+27-Nov-2026 10:39:29.656 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\skillTools\jdk-21.0.12
+27-Nov-2026 10:39:29.657 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.12+7-LTS-205
+27-Nov-2026 10:39:29.659 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+27-Nov-2026 10:39:29.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\alaukik-internship\phase-6\day-27\tomcat11
+27-Nov-2026 10:39:29.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\alaukik-internship\phase-6\day-27\tomcat11
+27-Nov-2026 10:39:29.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=c:\alaukik-internship\phase-6\day-27\tomcat11\conf\logging.properties
+27-Nov-2026 10:39:29.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Nov-2026 10:39:29.705 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Nov-2026 10:39:29.710 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Nov-2026 10:39:29.711 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+27-Nov-2026 10:39:29.712 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Nov-2026 10:39:29.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Nov-2026 10:39:29.738 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Nov-2026 10:39:29.741 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Nov-2026 10:39:29.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+27-Nov-2026 10:39:29.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=c:\alaukik-internship\phase-6\day-27\tomcat11
+27-Nov-2026 10:39:29.755 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=c:\alaukik-internship\phase-6\day-27\tomcat11
+27-Nov-2026 10:39:29.756 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=c:\alaukik-internship\phase-6\day-27\tomcat11\temp
+27-Nov-2026 10:39:29.787 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\skillTools\jdk-21.0.12\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python314\Scripts\;C:\Python314\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\skillTools\gradle-9.4.1\bin;C:\skillTools\jdk-21.0.12\bin;C:\mysql-9.6.0-winx64\bin;C:\mysql-connector;C:\ProgramData\chocolatey\bin;C:\sqlite;C:\graalvm-jdk-21.0.12+7.1\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\HP\AppData\Local\Microsoft\WindowsApps;C:\skillTools\gradle-9.4.1\bin;C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\bin;C:\mysql-9.6.0-winx64\bin;C:\mysql-connector;C:\graalvm-jdk-21.0.12+7.1\bin;C:\skillTools\jdk-21.0.12\bin;C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;C:\Users\HP\AppData\Roaming\npm;.]
+27-Nov-2026 10:39:30.844 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Nov-2026 10:39:30.999 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1844] milliseconds
+27-Nov-2026 10:39:31.241 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Nov-2026 10:39:31.241 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.29]
+27-Nov-2026 10:39:31.276 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\docs]
+27-Nov-2026 10:39:32.573 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\docs] has finished in [1,297] ms
+27-Nov-2026 10:39:32.574 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\examples]
+27-Nov-2026 10:39:33.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\examples] has finished in [1,127] ms
+27-Nov-2026 10:39:33.703 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\host-manager]
+27-Nov-2026 10:39:33.808 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\host-manager] has finished in [105] ms
+27-Nov-2026 10:39:33.808 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\manager]
+27-Nov-2026 10:39:33.877 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\manager] has finished in [68] ms
+27-Nov-2026 10:39:33.878 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\ROOT]
+27-Nov-2026 10:39:33.935 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\ROOT] has finished in [57] ms
+27-Nov-2026 10:39:33.936 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\servletExample]
+27-Nov-2026 10:39:33.986 WARNING [main] org.apache.jasper.servlet.TldScanner.scanJspConfig Failed to process TLD with path [/WEB-INF/jsp/jsp2-example-taglib.tld] and URI [http://tomcat.apache.org/jsp2-example-taglib]. The specified path does not exist.
+27-Nov-2026 10:39:33.988 WARNING [main] org.apache.jasper.servlet.TldScanner.scanJspConfig Failed to process TLD with path [/WEB-INF/jsp/debug-taglib.tld] and URI [http://tomcat.apache.org/debug-taglib]. The specified path does not exist.
+27-Nov-2026 10:39:33.991 WARNING [main] org.apache.jasper.servlet.TldScanner.scanJspConfig Failed to process TLD with path [/WEB-INF/jsp/example-taglib.tld] and URI [http://tomcat.apache.org/example-taglib]. The specified path does not exist.
+27-Nov-2026 10:39:34.007 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+27-Nov-2026 10:39:34.010 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/servletExample] startup failed due to previous errors
+27-Nov-2026 10:39:34.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\alaukik-internship\phase-6\day-27\tomcat11\webapps\servletExample] has finished in [95] ms
+27-Nov-2026 10:39:34.042 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Nov-2026 10:39:34.100 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2995] milliseconds
